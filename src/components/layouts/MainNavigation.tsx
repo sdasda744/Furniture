@@ -83,7 +83,7 @@ const MainNavigation = ({ items }: MainNavigationProps) => {
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
   React.ComponentPropsWithoutRef<"a">
->(({ className, title, href, children, ...props }, ref) => {
+>(({ className, title, href, children, ...props }) => {
   return (
     <li>
       <NavigationMenuLink asChild>
