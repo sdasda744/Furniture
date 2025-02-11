@@ -1,4 +1,5 @@
 import { useParams, Link } from "react-router-dom";
+import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Icons } from "@/components/icons/Icon";
 import { posts } from "@/data/posts";
@@ -6,6 +7,9 @@ import RichTextRender from "@/components/RichTextRender";
 
 const BlogDetail = () => {
   const { postId } = useParams();
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, [postId]);
   const post = posts.find((post) => post.id === postId);
   return (
     <div className="container mx-auto">
@@ -61,7 +65,9 @@ const BlogDetail = () => {
 
                   <div className="space-y-2">
                     <div className="line-clamp-2 text-sm">{post.content}</div>
-                    <div className="text-xs">... <i>see more</i></div>
+                    <div className="text-xs">
+                      ... <i>see more</i>
+                    </div>
                   </div>
                 </div>
               </Link>
