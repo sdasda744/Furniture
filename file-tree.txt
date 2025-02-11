@@ -1,0 +1,45 @@
+src
+├── assets
+│   ├── 404.svg
+│   └── react.svg
+├── components
+│   ├── icons
+│   │   └── Icon.tsx
+│   ├── layouts
+│   │   ├── Footer.tsx
+│   │   ├── Header.tsx
+│   │   ├── MainNavigation.tsx
+│   │   ├── MobileNavigation.tsx
+│   │   └── RootLayout.tsx
+│   ├── mode-toggle.tsx
+│   ├── NewsLetterForm.tsx
+│   ├── theme-provider.tsx
+│   └── ui
+│       ├── accordion.tsx
+│       ├── button.tsx
+│       ├── dropdown-menu.tsx
+│       ├── form.tsx
+│       ├── input.tsx
+│       ├── label.tsx
+│       ├── navigation-menu.tsx
+│       ├── scroll-area.tsx
+│       └── sheet.tsx
+├── config
+│   └── site.ts
+├── index.css
+├── lib
+│   └── utils.ts
+├── main.tsx
+├── pages
+│   ├── About.tsx
+│   ├── blogs
+│   │   ├── Blog.tsx
+│   │   ├── BlogDetail.tsx
+│   │   └── BlogRootLayout.tsx
+│   ├── ErrorPage.tsx
+│   └── HomePage.tsx
+├── routes
+│   └── router.tsx
+├── types
+│   └── index.ts
+└── vite-env.d.ts
