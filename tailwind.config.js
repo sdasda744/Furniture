@@ -1,20 +1,28 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: ["class"],
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   theme: {
-    extend: {
-			container: {
-        center: true, // Ensures the container is always centered
-        padding: '2rem', // You can set custom padding here
-        screens: {
-          'sm': '100%',
-          'md': '100%',
-          'lg': '100%',
-          'xl': '1200px', // Adjust max-width at xl breakpoint
-          '2xl': '1536px', // Set a max-width for 2xl
-        }
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: "1.5rem",
+        lg: "6rem"
       },
+      screens: {
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1400px",
+      },
+    },
+    extend: {
       fontFamily: {
         Poppins: ["Poppins", "serif"],
       },

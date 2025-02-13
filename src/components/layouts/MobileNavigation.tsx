@@ -44,7 +44,7 @@ const MobileNavigation = ({ items }: MainNavigationProps) => {
     <div className="lg:hidden">
       <Sheet>
         <SheetTrigger asChild>
-          <Button variant="ghost" size="icon" className="ml-4 size-6">
+          <Button variant="ghost" size="icon" className=" size-6">
             <Icons.menu aria-hidden="true" />
             <span className="sr-only">toggle menu</span>
           </Button>

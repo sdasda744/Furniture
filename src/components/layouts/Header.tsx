@@ -2,19 +2,20 @@ import { siteConfig } from "@/config/site";
 import MainNavigation from "./MainNavigation";
 import MobileNavigation from "./MobileNavigation";
 import { ModeToggle } from "../mode-toggle";
+import Container from "./Container";
 
 const Header = () => {
   return (
-    <header className="w-full border-b fixed top-0 z-50 bg-background">
-      <nav className="container flex justify-between items-center h-16 mx-auto">
-        <div className="">
+    <header className="fixed top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <Container className="flex items-center justify-between">
+        <nav className="flex justify-between items-center h-16">
           <MainNavigation items={siteConfig.mainNav} />
           <MobileNavigation items={siteConfig.mainNav} />
-        </div>
-        <div className="mr-4 lg:mr-0">
+        </nav>
+        <div className=" lg:mr-0">
           <ModeToggle />
         </div>
-      </nav>
+      </Container>
     </header>
   );
 };

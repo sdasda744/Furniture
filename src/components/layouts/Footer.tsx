@@ -2,12 +2,13 @@ import { Link } from "react-router-dom";
 import { Icons } from "../icons/Icon";
 import { siteConfig } from "@/config/site";
 import NewsLetterForm from "../NewsLetterForm";
+import Container from './Container';
 
 const Footer = () => {
   return (
-    <footer className="w-full  border-t">
-      <div className="container mx-auto pt-5 pb-4">
-        <section className="flex flex-col justify-between lg:flex-row gap-10 lg:gap-20 ml-4 lg:ml-0 ">
+    <footer className="border-t">
+      <Container className="pt-5 pb-4">
+        <section className="flex flex-col justify-between lg:flex-row gap-10 lg:gap-20 ">
           <section>
             <Link to="/" className="flex items-center gap-3">
               <Icons.logo className="size-6" />
@@ -15,10 +16,10 @@ const Footer = () => {
               <span className="sr-only">Home</span>
             </Link>
           </section>
-          <section className="grid gap-12  grid-cols-2 md:grid-cols-4">
+          <section className="grid gap-12 grid-cols-2 md:grid-cols-4">
             {siteConfig.footerNav.map((footer) => (
               <div key={footer.title} className="space-y-3">
-                <h4 className="font-semibold">{footer.title}</h4>
+                <h4 className="font-semibold text-nowrap">{footer.title}</h4>
                 <ul className="text-inherit">
                   {footer.items.map((item) => (
                     <li key={item.title}>
@@ -43,7 +44,7 @@ const Footer = () => {
             <NewsLetterForm />
           </section>
         </section>
-      </div>
+      </Container>
     </footer>
   );
 };

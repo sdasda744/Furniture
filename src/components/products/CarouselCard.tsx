@@ -25,7 +25,7 @@ export default function CarouselCard({ products }: ProductsProps) {
       opts={{
         align: "start",
       }}
-      className="max-w-[95%] mx-auto"
+      className="container mx-auto py-20"
     >
       <CarouselContent>
         {products.map((product) => (
@@ -49,8 +49,8 @@ export default function CarouselCard({ products }: ProductsProps) {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselNext />
-      <CarouselPrevious />
+      <CarouselNext className="mr-4" />
+      <CarouselPrevious className="ml-4" />
     </Carousel>
   );
 }

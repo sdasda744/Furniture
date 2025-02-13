@@ -7,7 +7,7 @@ interface PostProps {
 
 const BlogCard = ({ posts }: PostProps) => {
   return (
-    <section className="grid grid-cols-1 gap-6 md:gap-8 lg:gap-10 md:grid-cols-2 lg:grid-cols-3">
+    <div className="grid grid-cols-1 gap-6 md:gap-8 lg:gap-10 md:grid-cols-2 lg:grid-cols-3">
       {posts.map((post) => (
         <div key={post.id}>
           <Link to={`/blogs/${post.id}`}>
@@ -31,7 +31,7 @@ const BlogCard = ({ posts }: PostProps) => {
           </div>
         </div>
       ))}
-    </section>
+    </div>
   );
 };
 

@@ -20,7 +20,7 @@ interface MainNavigationProps {
 
 const MainNavigation = ({ items }: MainNavigationProps) => {
   return (
-    <div className="hidden lg:flex gap-6">
+    <div className="hidden lg:flex gap-6 ">
       <Link to="/" className="flex  items-center gap-3">
         <Icons.logo className="size-7" aria-hidden="true" />
         <span className="font-bold">{siteConfig.name}</span>
@@ -80,10 +80,7 @@ const MainNavigation = ({ items }: MainNavigationProps) => {
   );
 };
 
-const ListItem = React.forwardRef<
-  React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a">
->(({ className, title, href, children, ...props }) => {
+const ListItem = React.forwardRef<React.ElementRef<"a">,React.ComponentPropsWithoutRef<"a">>(({ className, title, href, children, ...props }) => {
   return (
     <li>
       <NavigationMenuLink asChild>

@@ -1,6 +1,10 @@
+import Container from '@/components/layouts/Container';
+
 const About = () => {
   return (
-    <div>About</div>
+    <Container>
+      <div>About</div>
+    </Container>
   )
 }
 
