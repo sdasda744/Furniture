@@ -1,6 +1,5 @@
 import BlogPostList from "@/components/blogs/BlogPostList";
 import { posts } from "@/data/posts";
-import Container from '@/components/layouts/Container';
 
 const Blog = () => {
   return (
